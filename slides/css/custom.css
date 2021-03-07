@@ -1,0 +1,34 @@
+.reveal *:not(pre) > code {
+	background-color: #efefef;
+}
+.reveal p {
+	margin-bottom: 5px;
+}
+
+/* ul/ol lists with result next to it */
+.flex {
+	display: flex;
+}
+.flex.with-result > * {
+	flex: 1;
+}
+.reveal .flex .result {
+	text-align: left;
+	align-self: center;
+	margin-left: 50px;
+}
+
+.html-example {
+	width: 200px;
+	box-shadow: 0 0 5px 3px black;
+	background: darkgray;
+	color: white;
+}
+
+.special {
+	background: lightgreen;
+}
+
+.special-list {
+	background: lightblue;
+}
