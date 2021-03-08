@@ -16,7 +16,6 @@ public class ButtonTest extends SeleniumBase {
         final WebElement button = driver.findElement(By.tagName("button"));
         WebDriverWait wait = new WebDriverWait(driver, 1);
 
-
         wait.until(ExpectedConditions.visibilityOf(button));
         button.click();
 
