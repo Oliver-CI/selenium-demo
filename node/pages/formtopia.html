@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This form</title>
+</head>
+<style>
+    label {
+        margin-right: 40px;
+    }
+
+    input {
+
+    }
+</style>
+<body>
+<h2>Try to submit this</h2>
+<form action="victory.html">
+    <div id="baseForm"></div>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset form</button>
+</form>
+
+<script>
+    const input_types = ['text', 'number', 'email', 'date','text']
+    // create label and input
+    const divs = [];
+    for (let i = 1; i <= 50; i++) {
+        const label = document.createElement('label');
+        const input = document.createElement('input');
+        const wrapper = document.createElement('div');
+        label.textContent = 'Label ' + i;
+        input.required = Math.random() < .5;
+        input.id = "input-i";
+        const index = Math.floor(Math.random() * input_types.length);
+        input.type = input_types[index]
+        wrapper.append(label, input)
+        divs.push(wrapper);
+    }
+    const content = document.getElementById('baseForm');
+    content.append(...divs);
+</script>
+</body>
+</html>
