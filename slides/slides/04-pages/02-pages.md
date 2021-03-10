@@ -1,9 +1,11 @@
 ## Flexibility and encapsulation
 
-Page objects themselves should never make verifications or assertions.
+- encapsulate logic to pages
+- reusability of a page
+- the assertions are only present in the tests
+- isLoaded() in a page
 
-There is one, single, verification which can, and should, be within the page object and that is to verify that the page,
-and possibly critical elements on the page, were loaded correctly.
+---
 
 ````java
 
@@ -33,3 +35,33 @@ public class TestLogin {
 
 }
 ````
+---
+### SignInPage
+
+````java
+public class SignInPage {
+
+    private final WebDriver driver;
+
+    public SignInPage(WebDriver driver) {
+        this.driver = driver;
+    }
+    
+    public void signInPage(final String userName, final String password){
+        // driver logic
+    }
+}
+
+````
+---
+### Multiple Test
+
+- Shared state
+- Scenario's
+- Performance?
+  <ul class="fragment">
+    <li>nightly build</li> 
+    <li>slow and fast</li>
+    <li>incremental</li>
+</ul>
+
