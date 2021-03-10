@@ -2,6 +2,15 @@
 
 This demo would hopefully guide some lost souls to get the hang of using selenium.
 
+## Examples
+
+You can run the examples by running. Be aware this have to be up when writing your tests.
+````bash
+cd /node
+npm i
+node server.js
+````
+
 ## Slides
 
 Best to install the [kc cli](https://www.npmjs.com/package/@infosupport/kc-cli)
