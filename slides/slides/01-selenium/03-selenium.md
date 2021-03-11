@@ -13,4 +13,16 @@
 ### E2E Test
 ![logo](../../assets/selenium_logo.png)
 
+---
+
+### Languages
+- Java
+- Python
+- C#
+- Ruby
+- Javascript
+- Perl, PHP
+- GO
+- Kotlin*
+
 

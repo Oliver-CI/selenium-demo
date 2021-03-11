@@ -53,15 +53,17 @@ public class SignInPage {
 }
 
 ````
----
-### Multiple Test
+### Page Factory
 
-- Shared state
-- Scenario's
-- Performance?
-  <ul class="fragment">
-    <li>nightly build</li> 
-    <li>slow and fast</li>
-    <li>incremental</li>
-</ul>
+````java
+public class SignInPage {
 
+  @FindBy(css = ".page-title")
+  private WebElement title;
+
+  public SignInPage(WebDriver driver) {
+    this.driver = driver;
+    PageFactory.initElements(driver, this);
+  }
+}
+````
