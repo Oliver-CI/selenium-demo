@@ -4,7 +4,7 @@
 
 ---
 
-### Methods
+### Driver Methods
 
 ```java
 driver.quit()
