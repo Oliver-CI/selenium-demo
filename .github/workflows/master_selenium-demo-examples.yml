@@ -33,4 +33,4 @@ jobs:
         app-name: 'selenium-demo-examples'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_624ef1c330424f04aaab22bf3b58b2a5 }}
-        package: .
+        package: ./examples
