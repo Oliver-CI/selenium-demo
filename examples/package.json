@@ -2,7 +2,10 @@
   "name": "selenium-demo",
   "version": "1.0.0",
   "description": "run the server using 'node server.js'",
-  "devDependencies": {
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
     "express": "^4.17.1"
   }
 }
