@@ -140,5 +140,5 @@ gradle-app.setting
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij,gradle,maven
 
-node/node_modules
-node/package-lock.json
+examples/node_modules
+examples/package-lock.json

@@ -6,7 +6,7 @@ This demo would hopefully guide some lost souls to get the hang of using seleniu
 
 You can run the examples by running. Be aware this have to be up when writing your tests.
 ````bash
-cd /node
+cd examples
 npm i
 node server.js
 ````
