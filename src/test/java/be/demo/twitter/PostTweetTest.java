@@ -7,11 +7,14 @@ public class PostTweetTest extends SeleniumBase {
 
     @Test
     public void canTypeTweet() {
+        // Get password from environment variable, not sharing it in public code :p
+        final String password = System.getenv("XPASS");
+
         // Login
         TwitterLoginPage login = new TwitterLoginPage(driver);
         login.navigateTo();
         wait(5).until(login.isLoaded());
-        login.login("TCoolsIT", System.getenv("XPASS"));
+        login.login("TCoolsIT",password );
 
         // Type and Submit Tweet
         TwitterPage mainPage = new TwitterPage(driver);
