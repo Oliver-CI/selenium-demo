@@ -4,6 +4,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SeleniumBase {
 
@@ -19,6 +20,10 @@ public class SeleniumBase {
     private void configureDriver() {
         ChromeOptions options = new ChromeOptions();
         driver = new ChromeDriver(options);
+    }
+
+    public WebDriverWait wait(int seconds) {
+        return new WebDriverWait(driver, seconds);
     }
 
     /*
