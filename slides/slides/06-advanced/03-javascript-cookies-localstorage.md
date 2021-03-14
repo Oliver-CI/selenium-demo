@@ -20,7 +20,7 @@ Cookie driverCookie = driver.manage().getCookieNamed("foo");
 ### Accessing LocalStorage/SessionStorage
 
 ```java
-Webstorage storage = (WebStorage)new Augmenter().augment(driver);
+WebStorage storage = (WebStorage)new Augmenter().augment(driver);
 
 // Select a type of storage
 LocalStorage localStorage = storage.getLocalStorage();

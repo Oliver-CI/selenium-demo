@@ -1,4 +1,4 @@
-package be.demo;
+package be.demo.basic;
 
 import be.demo.base.SeleniumBase;
 import org.junit.jupiter.api.Test;

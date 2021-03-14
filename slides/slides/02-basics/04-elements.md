@@ -2,6 +2,12 @@
 
 ---
 
+### Finding elements
+
+driver.findElement vs driver.findElements
+
+---
+
 ### Element methods
 
 ````java

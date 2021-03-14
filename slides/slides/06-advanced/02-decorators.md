@@ -60,7 +60,4 @@ Path destination = Path.of("c:/temp/screenshot" + System.currentTimeMillis() + "
 Files.copy(screenshot.toPath(), destination);
 ```
 
----
-
-
 

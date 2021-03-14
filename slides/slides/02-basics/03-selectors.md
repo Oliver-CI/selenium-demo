@@ -2,12 +2,6 @@
 
 ---
 
-### Finding elements
-
-findElement vs findElements
-
----
-
 ### Query Selector
 
 ````java

@@ -1,9 +1,9 @@
-## Flexibility and encapsulation
+## Why use POM?
 
-- encapsulate logic to pages
-- reusability of a page
-- the assertions are only present in the tests
-- isLoaded() in a page
+- Encapsulate logic to pages
+- Reusability of a page
+- The assertions are only present in the tests
+- Clean separation between test and page services
 
 ---
 
@@ -48,7 +48,7 @@ public class SignInPage {
     }
     
     public void signInPage(final String userName, final String password){
-        // driver logic
+        // page logic
     }
 }
 
@@ -68,5 +68,15 @@ public class SignInPage {
     this.driver = driver;
     PageFactory.initElements(driver, this);
   }
+}
+````
+No more
+````java
+public class SignInPage {
+    ...
+
+    public void signInPage(final String userName, final String password) {
+        driver.findElement(By.cssSelector(".page-title"));
+    }
 }
 ````

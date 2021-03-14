@@ -1,7 +1,7 @@
 package be.demo.twitter;
 
 import be.demo.base.SeleniumBase;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class PostTweetTest extends SeleniumBase {
 

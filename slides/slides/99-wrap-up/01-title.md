@@ -15,6 +15,6 @@ https://www.baeldung.com/java-selenium-with-junit-and-testng
 https://www.baeldung.com/selenium-webdriver-page-object
 
 --- 
-### Usefull next steps
+### Useful next steps
 
 [Selenide: Selenium and Assertions](https://selenide.org/documentation.html)
