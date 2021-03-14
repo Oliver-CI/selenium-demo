@@ -1,9 +1,10 @@
-## Webdriver Decorators
+## Webdriver Decorators & Interface
 
-Used to add more complex functionality to the Webdriver
+Used to unlock more complex functionality to the Webdriver
 
-- Actions
-- EventListener
+- Actions (Decorator)
+- EventListener (Decorator)
+- Screenshots (Interface)
 
 --- 
 
@@ -40,6 +41,26 @@ public class MyListener extends AbstractWebDriverEventListener {
 ```
 
 Allows you to intercept whenever an action is happening.
+
+--- 
+
+### Taking Screenshots
+
+*Most* Webdrivers implement the TakesScreenshot-interface.
+This means we could cast them to that interface and use it to create a screenshot.
+
+```java
+File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+// Read it from default location
+String absolutePath = screenshot.getAbsolutePath();
+
+// Copy it to somewhere else.
+Path destination = Path.of("c:/temp/screenshot" + System.currentTimeMillis() + ".png");
+Files.copy(screenshot.toPath(), destination);
+```
+
+---
 
 
 
