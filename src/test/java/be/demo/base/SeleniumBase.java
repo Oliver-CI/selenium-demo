@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class SeleniumBase {
 
 //    public static final String BASE_URL = "http://localhost:3000";
-    public static final String BASE_URL = "https://selenium-demo-examples.azurewebsites.net/";
+    public static final String BASE_URL = "https://selenium-demo.azurewebsites.net/";
     //    public static final String BASE_URL = "http://172.19.44.147:3000";
     protected static WebDriver driver;
 
