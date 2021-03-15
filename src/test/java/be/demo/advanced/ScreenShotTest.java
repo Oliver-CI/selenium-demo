@@ -19,11 +19,11 @@ public class ScreenShotTest extends SeleniumBase {
     void takeAScreenShot() throws IOException {
         // Arrange
         driver.get(BASE_URL);
+        Path destination = Path.of(System.getProperty("user.dir") + "/screenshot.png");
 
         // Act
-        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        Path destination = Path.of(System.getProperty("user.dir") + "/screenshot.png");
-        Files.copy(screenshot.toPath(), destination);
+
+        // TODO: Take a screenshot and save it in the destination as defined above.
 
         // Assert
         assertThat(Files.deleteIfExists(destination)).isTrue();

@@ -25,10 +25,8 @@ public class StateTest extends SeleniumBase {
     @Test
     void cookies() {
         // Arrange
-        Cookie cookie = new Cookie("foo", "bar");
 
-        // Act
-        driver.manage().addCookie(cookie);
+        // TODO: Add a Cookie named "foo" with value "bar"
 
         // Assert
         Cookie driverCookie = driver.manage().getCookieNamed("foo");
@@ -38,22 +36,18 @@ public class StateTest extends SeleniumBase {
 
     @Test
     void sessionStorage() {
-        // Arrange
+
         WebStorage storage = (WebStorage) new Augmenter().augment(driver);
 
-        LocalStorage localStorage = storage.getLocalStorage();
-        SessionStorage sessionStorage = storage.getSessionStorage();
-
-        // Act
-        localStorage.setItem("LOCAL_KEY", "VALUE");
-        sessionStorage.setItem("SESSION_KEY", "VALUE");
-
+        // TODO Add following entries:
+        // In localStorage: "LOCAL_KEY", "VALUE"
+        // In SessionStorage: "SESSION_KEY", "VALUE"
 
         // Assert
-        String localStorageItem = localStorage.getItem("LOCAL_KEY");
+        String localStorageItem = storage.getLocalStorage().getItem("LOCAL_KEY");
         assertThat(localStorageItem).isEqualTo("VALUE");
 
-        String sessionStorageItem = sessionStorage.getItem("SESSION_KEY");
+        String sessionStorageItem = storage.getSessionStorage().getItem("SESSION_KEY");
         assertThat(localStorageItem).isEqualTo("VALUE");
     }
 }

@@ -15,7 +15,7 @@ public class TextTest extends SeleniumBase {
         driver.navigate().to(BASE_URL);
 
         // Act
-        final String title = driver.getTitle();
+        final String title = ""; //TODO fill 'title' variable with the title of the page
 
         // Assert
         assertThat(title).isEqualTo("Demo Selenium");
@@ -27,9 +27,9 @@ public class TextTest extends SeleniumBase {
         driver.navigate().to(BASE_URL);
 
         // Act
-        final String title = driver.findElement(By.cssSelector("h1")).getText();
+        final String header = ""; //TODO fill 'header' variable with the text content of the header
 
         // Assert
-        assertThat(title).isEqualTo("Hello Class");
+        assertThat(header).isEqualTo("Hello Class");
     }
 }

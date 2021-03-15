@@ -20,32 +20,16 @@ public class TwitterLoginPage {
     }
 
     public ExpectedCondition<WebElement> isLoaded() {
-        return presenceOfElementLocated(Elements.USERNAME_BOX.selector);
+        // Todo: Expectation: Username (textbox) Element is present.
+        return null;
     }
 
     public void navigateTo() {
+        // TODO: navigate to https://twitter.com/login
         driver.get("https://twitter.com/login");
     }
 
     public void login(String username, String password) {
-        driver.findElement(Elements.USERNAME_BOX.selector).sendKeys(username);
-        driver.findElement(Elements.PASSWORD_BOX.selector).sendKeys(password);
-
-        final WebElement loginButton = driver.findElement(Elements.LOGIN_BUTTON.selector);
-        wait.until(ExpectedConditions.visibilityOf(loginButton));
-        loginButton.click();
-    }
-
-
-    enum Elements {
-        USERNAME_BOX(By.name("session[username_or_email]")),
-        PASSWORD_BOX(By.name("session[password]")),
-        LOGIN_BUTTON(By.cssSelector("div[data-testid='LoginForm_Login_Button']"));
-
-        By selector;
-
-        Elements(By selector) {
-            this.selector = selector;
-        }
+        // TODO fill in user name and click login button
     }
 }

@@ -16,12 +16,10 @@ public class FormTest extends SeleniumBase {
     void fillInAndSubmitForm() {
         // Arrange
         driver.navigate().to(BASE_URL + "/form.html");
-        // Act
-        final WebElement content = driver.findElement(By.id("content"));
-        content.sendKeys("my super special content");
 
-        final WebElement submitButton = driver.findElement(By.id("submit_button"));
-        submitButton.click();
+        // Act
+
+        // TODO: fill in the content and click the submit button
 
         // Assert
         assertThat(driver.getCurrentUrl()).containsIgnoringCase("Victory");
@@ -33,14 +31,13 @@ public class FormTest extends SeleniumBase {
     void fillInAndSubmitFormtopia() {
         // Arrange
         driver.navigate().to(BASE_URL + "/formtopia.html");
-        // Act
-        final List<WebElement> inputs = driver.findElements(By.tagName("input"));
-        inputs.stream()
-                .filter(i -> i.getAttribute("required") != null)
-                .forEach(this::fillInInput);
 
-        final WebElement submitButton = driver.findElement(By.xpath("//button[contains(@type,'submit')]"));
-        submitButton.click();
+        // Act
+
+        // TODO: find all 'input' elements. Loop over them.
+        // If they have a 'required' attribute, fill them in using the private method: fillInput)
+
+        // TODO: After everything is filled in, click the Submit button.
 
         // Assert
         assertThat(driver.getCurrentUrl()).containsIgnoringCase("Victory");
