@@ -35,6 +35,8 @@ https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver
         - Click "Browse" and select the folder where Chromedriver is located (ex. c:/tools)
     - Linux & Mac: This step is not needed if you use apt-get/homebrew
 
+If you have issues setting up your chromedriver, you can watch this: [youtube video](https://www.youtube.com/watch?v=dz59GsdvUF8)
+
 ### Method 2: Using Docker
 
 If you feel fancy and don't like weird drivers on your system you can spin up a docker container keep in mind you will not see the browser:
